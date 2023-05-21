@@ -34,7 +34,7 @@ void partuno()
 
 	for (int i = 0; i < 10; i++)
 	{
-		//if (ptr2)
+	
 		cout << ptr2[i] << " ";  //execption thrownException thrown: read access violation.
 		                        //ptr2 was 0x1E64152.
 
@@ -58,7 +58,7 @@ void partdos()
 	std::cout << "Address of ptr2: " << ptr2 << std::endl;
 	for (int i = 0; i < 10; ++i)
 	{
-		//if(ptr2)
+		
 		cout << ptr2[i] << " ";
 	}
 		cout << endl;
