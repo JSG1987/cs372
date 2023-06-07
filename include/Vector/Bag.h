@@ -16,6 +16,7 @@ public:
 	void insert(Thing aThing)
 	{
 		bagVector.push_back(aThing);
+		//cout << aThing << endl;
 	}
 
 	Thing& pop()
