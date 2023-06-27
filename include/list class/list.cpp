@@ -1,4 +1,4 @@
-#include "list.h"
+#include "fuctionsForList.h"
 #include <iostream>
 
 // A sample function to be used with the traverse() function
