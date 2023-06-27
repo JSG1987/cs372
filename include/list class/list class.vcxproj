@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Header.h" />
     <ClInclude Include="list.h" />
     <ClInclude Include="fuctionsForList.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="baggg.cpp" />
     <ClCompile Include="list.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
