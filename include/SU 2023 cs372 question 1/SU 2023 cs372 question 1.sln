@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33801.447
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SU 2023 cs372 question 1", "SU 2023 cs372 question 1.vcxproj", "{A731BB2B-3D41-4E62-A66B-E915C8B491FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A731BB2B-3D41-4E62-A66B-E915C8B491FF}.Debug|x64.ActiveCfg = Debug|x64
+		{A731BB2B-3D41-4E62-A66B-E915C8B491FF}.Debug|x64.Build.0 = Debug|x64
+		{A731BB2B-3D41-4E62-A66B-E915C8B491FF}.Debug|x86.ActiveCfg = Debug|Win32
+		{A731BB2B-3D41-4E62-A66B-E915C8B491FF}.Debug|x86.Build.0 = Debug|Win32
+		{A731BB2B-3D41-4E62-A66B-E915C8B491FF}.Release|x64.ActiveCfg = Release|x64
+		{A731BB2B-3D41-4E62-A66B-E915C8B491FF}.Release|x64.Build.0 = Release|x64
+		{A731BB2B-3D41-4E62-A66B-E915C8B491FF}.Release|x86.ActiveCfg = Release|Win32
+		{A731BB2B-3D41-4E62-A66B-E915C8B491FF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA2B74B3-5F5E-4FF3-8ACC-E8A198FCD770}
+	EndGlobalSection
+EndGlobal
