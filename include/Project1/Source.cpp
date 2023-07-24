@@ -19,7 +19,7 @@ template <typename ValueType>
 class AdjacencyListGraph : public Graph<ValueType> {
 private:
     vector<list<ValueType>> adjacencyList;
-    size_t numNodes; // Store the number of nodes in the graph
+    size_t numNodes;
 
 public:
     AdjacencyListGraph(size_t n) : adjacencyList(n), numNodes(n) {}
@@ -39,7 +39,7 @@ public:
 
     void addEdge(ValueType source, ValueType dest) override {
         adjacencyList[source].push_back(dest);
-        adjacencyList[dest].push_back(source); // For undirected graph
+        adjacencyList[dest].push_back(source); 
     }
 
     void addNode(ValueType x) override {
@@ -50,7 +50,7 @@ public:
 
     void deleteEdge(ValueType source, ValueType dest) override {
         adjacencyList[source].remove(dest);
-        adjacencyList[dest].remove(source); // For undirected graph
+        adjacencyList[dest].remove(source); 
     }
 
     void deleteNode(ValueType node) override {
@@ -67,22 +67,22 @@ public:
 
 
 bool findPathToKevinBacon(Graph<int>& graph, int start, int end, vector<int>& path, vector<bool>& visited) {
-    // If the current node is Kevin Bacon, add it to the path and return true.
+    
     if (start == end) {
         path.push_back(start);
         return true;
     }
 
-    // Mark the current node as visited.
+   
     visited[start] = true;
 
-    // Check neighbors of the current node.
+   
     vector<int> neighbors = graph.neighbors(start);
     for (int neighbor : neighbors) {
         if (!visited[neighbor]) {
-            // Recursively find the path to Kevin Bacon from the neighbor.
+            
             if (findPathToKevinBacon(graph, neighbor, end, path, visited)) {
-                path.push_back(start); // Add the current node to the path before returning.
+                path.push_back(start); 
                 return true;
             }
         }
@@ -92,15 +92,15 @@ bool findPathToKevinBacon(Graph<int>& graph, int start, int end, vector<int>& pa
 }
 
 bool isConnectedToKevinBacon(Graph<int>& graph, int end, vector<int>& path) {
-    int start = 0; // Assuming you are the starting node with index 0.
+    int start = 0; 
 
-    // Initialize visited array with the correct size (21 nodes in total).
+   
     vector<bool> visited(21, false);
 
-    // Find the path to Kevin Bacon.
+    
     bool isConnected = findPathToKevinBacon(graph, start, end, path, visited);
 
-    // Reverse the path to get the correct order (from you to Kevin Bacon).
+ 
     reverse(path.begin(), path.end());
 
     return isConnected;
@@ -108,14 +108,14 @@ bool isConnectedToKevinBacon(Graph<int>& graph, int end, vector<int>& path) {
 
 int main() {
     // Create the social graph.
-    AdjacencyListGraph<int> socialGraph(21); // 21 nodes, including you and Kevin Bacon
+    AdjacencyListGraph<int> socialGraph(21); 
 
-    socialGraph.addEdge(0, 1); // Connection with classmate 1
-    socialGraph.addEdge(0, 2); // Connection with classmate 2
-    socialGraph.addEdge(1, 3); // Your first classmate has a connection with another person
-    socialGraph.addEdge(3, 20); // Connection from that person to Kevin Bacon
+    socialGraph.addEdge(0, 1); 
+    socialGraph.addEdge(0, 2); 
+    socialGraph.addEdge(1, 3); 
+    socialGraph.addEdge(3, 20); 
 
-    // You can add more connections based on the relationships and movies people have worked on.
+ 
 
     // Check if you are connected to Kevin Bacon and find the path if it exists.
     vector<int> pathToKevinBacon;
@@ -132,7 +132,7 @@ int main() {
     bool isConnected = isConnectedToKevinBacon(socialGraph, kevinBaconNode, pathToKevinBacon);
 
 
-    // Output the result based on the isConnected value and the pathToKevinBacon vector.
+    // Output the result
     if (isConnected) {
         cout << "Congratulations! You are connected to Kevin Bacon!" << endl;
         cout << "The path to Kevin Bacon is:" << endl;
